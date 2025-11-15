@@ -390,7 +390,8 @@ if __name__ == "__main__":
             try:
                 limiter.check_rate_limit(user_id)
                 status = limiter.get_status(user_id)
-                print(f"Request {i+1}: ALLOWED - {status['remaining_requests']} remaining")
+                remaining = status.get('remaining_requests') or status.get('remaining_tokens', 'N/A')
+                print(f"Request {i+1}: ALLOWED - {remaining} remaining")
             except RateLimitExceeded as e:
                 print(f"Request {i+1}: REJECTED - {e}")
 
