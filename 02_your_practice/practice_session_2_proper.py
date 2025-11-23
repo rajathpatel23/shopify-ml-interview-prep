@@ -64,13 +64,11 @@ BEFORE YOU START - ANSWER THESE:
 NOW START CODING AND TALK OUT LOUD!
 """
 
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Optional
 import time
 import pytest
 import threading
 
-# YOUR CODE STARTS HERE
-# Remember: TALK OUT LOUD, TEST EACH FUNCTION, THINK EDGE CASES
 
 
 # how to make this thread safe?

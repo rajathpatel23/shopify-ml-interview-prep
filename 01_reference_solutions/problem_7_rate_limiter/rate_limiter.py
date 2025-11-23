@@ -305,6 +305,14 @@ class FixedWindowLimiter:
             }
 
 
+# from enum import Enum
+# class RateLimitAlgorithm(Enum):
+#     """Different rate limiting algorithms."""
+#     TOKEN_BUCKET = "token_bucket"
+#     SLIDING_WINDOW = "sliding_window"
+#     FIXED_WINDOW = "fixed_window"
+
+
 class RateLimiter:
     """
     Unified rate limiter supporting multiple algorithms.
@@ -322,7 +330,7 @@ class RateLimiter:
             config: Rate limit configuration
         """
         self.config = config
-
+        
         # Factory pattern to create appropriate limiter
         if config.algorithm == RateLimitAlgorithm.TOKEN_BUCKET:
             self.limiter = TokenBucketLimiter(config)

@@ -673,8 +673,7 @@ script runs atomically on the Redis server, so even with hundreds of
 app servers, we avoid race conditions.
 
 The trade-off is network latency - each request has to query Redis -
-but Redis is fast enough (1-2ms) that it's not a bottleneck. This is
-the industry-standard approach used by Shopify, Stripe, and GitHub."
+ the industry-standard approach used by Shopify, Stripe, and GitHub."
 ```
 
 ---
